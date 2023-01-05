@@ -42,7 +42,7 @@ export async function handler(event, context) {
         
         const message = {
             embed: {
-                title: "New Appeal Sbmitted!",
+                title: "New Appeal Submitted!",
                 timestamp: new Date().toISOString(),
                 fields: [
                     {
