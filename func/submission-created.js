@@ -42,7 +42,7 @@ export async function handler(event, context) {
         
         const message = {
             embed: {
-                title: "New appeal submitted!",
+                title: "New Appeal Sbmitted!",
                 timestamp: new Date().toISOString(),
                 fields: [
                     {
@@ -54,12 +54,16 @@ export async function handler(event, context) {
                         value: payload.banReason.slice(0, MAX_EMBED_FIELD_CHARS)
                     },
                     {
-                        name: "Why do you feel you should be unbanned?",
+                        name: "Do you feel your ban was a mistake? [Yes/No/Other]",
                         value: payload.appealText.slice(0, MAX_EMBED_FIELD_CHARS)
                     },
                     {
-                        name: "What will you do to avoid being banned in the future?",
+                        name: "Is there anything you would like to say to Staff regarding your unban appeal and ban?",
                         value: payload.futureActions.slice(0, MAX_EMBED_FIELD_CHARS)
+                    },
+                    {
+                        name: "I acknowledge the information entered here is correct, and I consent to my unban status being moved to declined if I am found to be lying or fabricating evidence.",
+                        value: payload.agreeText.slice(0, MAX_EMBED_FIELD_CHARS)
                     }
                 ]
             }
