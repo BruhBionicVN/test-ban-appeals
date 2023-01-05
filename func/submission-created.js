@@ -63,7 +63,7 @@ export async function handler(event, context) {
                     },
                     {
                         name: "I acknowledge the information entered here is correct, and I consent to my unban status being moved to declined if I am found to be lying or fabricating evidence.",
-                        value: payload.agreeText.slice(0, MAX_EMBED_FIELD_CHARS)
+                        value: payload.appealText.slice(0, MAX_EMBED_FIELD_CHARS)
                     }
                 ]
             }
